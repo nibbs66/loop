@@ -15,5 +15,6 @@ module.exports = {
             "firebasestorage.googleapis.com",
         ]
 
-    }
+    },
+    devtool: false,
 }
