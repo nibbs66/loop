@@ -10,7 +10,7 @@ import ArrowBack from "../../components/icons/ArrowBack";
 const Shop = ({categories, name}) => {
 
 
-
+console.log(categories)
 
     return (
         <div className={styles.container}>
@@ -40,7 +40,7 @@ const Shop = ({categories, name}) => {
 
             <div key={idx}>
 
-                <CategoryCard key={idx} fill='fill' index='all' name={list[idx].name} desc={list[idx].desc} img={list[idx].img}/>
+                <CategoryCard key={idx} fill='fill' index='all' name={categories[idx].name} desc={categories[idx].desc} img={categories[idx].img}/>
 
               </div>
             ))}
@@ -53,7 +53,7 @@ const Shop = ({categories, name}) => {
 export default Shop;
 Shop.layout = "L3";
 export const getServerSideProps = async() => {
-  const res = await axios.get(`/api/catmenu`);
+  const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/catmenu`);
 
 
 
