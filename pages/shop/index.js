@@ -8,7 +8,7 @@ import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
 const Shop = ({categories, name}) => {
-const [list, setList] = useState(categories)
+
 
 
 console.log(list)
@@ -36,7 +36,7 @@ console.log(list)
                 <link rel="icon" href="/favicon.ico" />
             </Head>
           <div  className={styles.cardContainer}>
-            {list.map((category, idx)=> (
+            {categories.map((category, idx)=> (
 
             <div key={idx}>
 
