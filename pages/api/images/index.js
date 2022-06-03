@@ -7,9 +7,6 @@ export default async function handler(req, res) {
         method,
     } = req;
 
-
-
-
     if(method==="GET"){
 
         try {

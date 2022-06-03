@@ -24,9 +24,9 @@ console.log(pics)
        <div className={styles.container}>
 
          <div className={styles.intro}>
-            <Link href='/shop' as='shop' crossorigin="anonymous" passHref>
+
                 <button className={styles.button}>SHOP NOW</button>
-            </Link>
+
         </div>
 
 
