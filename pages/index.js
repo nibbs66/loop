@@ -10,7 +10,7 @@ import VendorLogos from "../components/website/VendorLogos";
 
 Home.layout = "L3";
 export default function Home({images}) {
-
+console.log(images)
 
     const [sale, setSale] = useState(false)
 
@@ -38,7 +38,7 @@ console.log(images)
 
     )
 }
-export  const getServerSideProps = async () => {
+export async function getStaticProps (){
 
         const res = await axios.get(process.env.VERCEL_URL+`/api/images`);
 
