@@ -86,7 +86,7 @@ console.log(categoryList.length)
     export default Product;
 Product.layout = "L3";
 
-export const getServerSideProps = async ({params}, ctx) =>{
+export const getServerSideProps = async (ctx, {params}) =>{
     const host = ctx.req.headers.host;
     const res = await axios.get(`https://`+host+`/api/products?category=${params.cat}`);
     const cat = await axios.get(`https://`+host+`/api/catmenu?category=${params.cat}`);
