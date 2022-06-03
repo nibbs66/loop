@@ -11,7 +11,7 @@ const Shop = ({categories, name}) => {
 
 
 
-console.log(list)
+
     return (
         <div className={styles.container}>
         <div className={styles.header}>
