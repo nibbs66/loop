@@ -36,7 +36,7 @@ console.log(images)
 
     )
 }
-export async function getStaticProps (){
+export async function getServerSideProps (){
 
         const res = await axios.get(process.env.VERCEL_URL+`/api/images`);
 
