@@ -24,8 +24,10 @@ console.log(pics)
        <div className={styles.container}>
 
          <div className={styles.intro}>
+<Link href='/shop'>
+    <button className={styles.button}>SHOP NOW</button>
+</Link>
 
-                <button className={styles.button}>SHOP NOW</button>
 
         </div>
 

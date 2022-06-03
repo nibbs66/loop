@@ -36,14 +36,14 @@ console.log(list)
                 <link rel="icon" href="/favicon.ico" />
             </Head>
           <div  className={styles.cardContainer}>
-            {list.map((category, idx)=> {
+            {list.map((category, idx)=> (
 
-         return   <div key={idx}>
+            <div key={idx}>
 
                 <CategoryCard key={idx} fill='fill' index='all' name={list[idx].name} desc={list[idx].desc} img={list[idx].img}/>
 
               </div>
-            })}
+            ))}
           </div>
 
         </div>
