@@ -7,7 +7,7 @@ import axios from "axios";
 import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
-const Shop = ({categories}) => {
+const Index = ({categories}) => {
 
 
 
@@ -46,11 +46,13 @@ const Shop = ({categories}) => {
     );
 };
 
-export default Shop;
-Shop.layout = "L3";
-export const getServerSideProps = async() => {
+export default Index;
+Index.layout = "L3";
+export const getServerSideProps = async(ctx) => {
+ const host = ctx.req.headers.host;
+ console.log(host)
 
-    const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/catMenu`);
+    const res = await axios.get(`https://`+host+`/api/catMenu`);
   return{
     props:{
       categories: res.data,
