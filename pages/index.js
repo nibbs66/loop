@@ -40,7 +40,7 @@ console.log(images)
 }
 export  const getServerSideProps = async () => {
 
-        const res = await axios.get(`/api/images`);
+        const res = await axios.get(process.env.VERCEL_URL+`/api/images`);
 
         return{
             props:{
