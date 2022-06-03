@@ -2,14 +2,13 @@ import dbConnect from "../../../lib/mongo";
 import WebImage from "../../../models/WebImage";
 
 export default async function handler(req, res) {
+    await dbConnect()
     const {
         method,
-
-
     } = req;
 
 
-    await dbConnect()
+
 
     if(method==="GET"){
 
