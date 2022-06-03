@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../../styles/website/ServiceCard.module.css";
 import Image from "next/image";
 
-import Router, {useRouter} from 'next/router'
+import{useRouter} from 'next/router'
 const ServiceCard = ({product, cat}) => {
 
     const router = useRouter()
