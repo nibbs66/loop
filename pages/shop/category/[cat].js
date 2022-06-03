@@ -90,7 +90,7 @@ export const getServerSideProps = async (ctx) =>{
 
     const host = ctx.req.headers.host;
     const res = await axios.get(`https://`+host+`/api/products?category=${ctx.params.cat}`);
-    const cat = await axios.get(`https://`+host+`/api/catmenu?category=${ctx.params.cat}`);
+    const cat = await axios.get(`https://`+host+`/api/catMenu?category=${ctx.params.cat}`);
 
 
     return{
