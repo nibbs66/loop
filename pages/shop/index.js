@@ -53,7 +53,7 @@ export default Index;
 Index.layout = "L3";
 export const getServerSideProps = async(ctx) => {
  const host = ctx.req.headers.host;
- console.log(host)
+
 
     const res = await axios.get(`https://`+host+`/api/catMenu`);
   return{
