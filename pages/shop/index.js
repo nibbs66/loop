@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react';
+import React from 'react';
 import styles from "../../styles/website/Shop.module.css"
 import Link from "next/link"
 
@@ -7,7 +7,7 @@ import axios from "axios";
 import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
-const Shop = ({categories, name}) => {
+const Shop = ({categories}) => {
 
 
 console.log(categories)
@@ -53,7 +53,7 @@ console.log(categories)
 export default Shop;
 Shop.layout = "L3";
 export const getServerSideProps = async() => {
-  const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/catmenu`);
+    const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/catmenu`);
 
   return{
     props:{
