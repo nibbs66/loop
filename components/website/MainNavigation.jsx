@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../../styles/website/Navbar.module.css";
 import Link from "next/link";
 
-import DropDown from "../DropDown";
+
 
 const MainNavigation = ({setActive, active, session, user, setTitle, handleClick, handleLogOut, test, showDropdown}) => {
     return (
@@ -55,7 +55,7 @@ const MainNavigation = ({setActive, active, session, user, setTitle, handleClick
                     </>}
             </ul>
 
-            <DropDown/>
+
         </div>
     );
 };

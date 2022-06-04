@@ -36,7 +36,7 @@ export default function Home({images}) {
 
     )
 }
-export async function getServerSideProps (){
+export async function getServerSideProps (ctx){
     const host = ctx.req.headers.host;
 
 
