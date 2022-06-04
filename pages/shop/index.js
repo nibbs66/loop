@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "../../styles/website/Shop.module.css"
 import Link from "next/link"
 
@@ -8,9 +8,11 @@ import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
 const Index = ({categories}) => {
+const [count, setCount] = useState(0)
 
-
-
+const handleClick= () => {
+    setCount( count + 1)
+}
 
     return (
         <div className={styles.container}>
@@ -22,11 +24,12 @@ const Index = ({categories}) => {
                       <ArrowBack height={35} width={35}/>
                     </div>
                     <h1 className={styles.terug}> Terug</h1>
+
                   </div>
 
                 </Link>
                 </div>
-
+            <button onClick={handleClick}>{count}</button>
             <h1>Choose a Category:</h1>
 
         </div>
