@@ -37,8 +37,10 @@ export default function Home({images}) {
     )
 }
 export async function getServerSideProps (){
+    const host = ctx.req.headers.host;
 
-        const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/images`);
+
+    const res = await axios.get(`https://`+host+`/api/images`);
 
         return{
             props:{
