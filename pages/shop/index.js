@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "../../styles/website/Shop.module.css"
 import Link from "next/link"
 
@@ -8,11 +8,7 @@ import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
 const Index = ({categories}) => {
-const [count, setCount] = useState(0)
 
-const handleClick= () => {
-    setCount( count + 1)
-}
 
     return (
         <div className={styles.container}>

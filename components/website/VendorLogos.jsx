@@ -8,7 +8,7 @@ import axios from "axios";
 
 
 
-const VendorLogos = ({logos, width, as}) => {
+const VendorLogos = ({logos, as}) => {
 
 
 
