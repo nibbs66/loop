@@ -25,7 +25,7 @@ const Index = ({categories}) => {
 
                 </Link>
                 </div>
-            <button onClick={handleClick}>{count}</button>
+
             <h1>Choose a Category:</h1>
 
         </div>
