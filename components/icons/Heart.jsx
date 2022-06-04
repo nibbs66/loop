@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heart = ({height, width, color, fill}) => {
+const Heart = () => {
     return (
         <div>
             <svg
